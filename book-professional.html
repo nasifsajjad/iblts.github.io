@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Professional Test - IBLTS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .booking-steps {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+            position: relative;
+        }
+        
+        .booking-steps::before {
+            content: "";
+            position: absolute;
+            top: 25px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #0056b3;
+            z-index: 1;
+        }
+        
+        .step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            width: 25%;
+        }
+        
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background: #0056b3;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            margin: 0 auto 15px;
+        }
+        
+        .test-option-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 20px 0;
+            border: 2px solid #eee;
+            transition: all 0.3s;
+        }
+        
+        .test-option-card:hover {
+            border-color: #0056b3;
+            transform: translateY(-5px);
+        }
+        
+        .test-option-header {
+            background: #f0f5ff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .test-option-icon {
+            width: 50px;
+            height: 50px;
+            background: #0056b3;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        
+        .test-option-content {
+            padding: 25px;
+        }
+        
+        .price-tag {
+            font-size: 24px;
+            font-weight: 700;
+            color: #e63946;
+            margin: 15px 0;
+        }
+        
+        .professions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .profession-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .profession-icon {
+            font-size: 32px;
+            color: #0056b3;
+            margin-bottom: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+        
+        .test-locations {
+            margin-top: 30px;
+        }
+        
+        .location-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .location-icon {
+            margin-right: 15px;
+            color: #0056b3;
+            font-size: 20px;
+        }
+        
+        .info-box {
+            background: #f0f5ff;
+            border-left: 4px solid #e63946;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+                .cta-button {
+            background-color: #e63946;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #c1121f;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        
+        <div class="container main-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-language" style="font-size: 36px; color: #0056b3;"></i>
+                </div>
+                <div class="logo-text">I<span class="logo-accent">B</span>LTS</div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="test-types.html">Test Types</a></li>
+                    <li><a href="preparation.html">Preparation</a></li>
+                    <li><a href="results.html">Results</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <a href="test-types.html" class="cta-button">Book a Test</a>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> <span>&gt;</span> 
+            <a href="test-types.html">Test Types</a> <span>&gt;</span> 
+            <a href="book-professional.html">Book Professional Test</a>
+        </div>
+        
+        <!-- Page Content Container -->
+        <div class="content-grid">
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <div class="page-content">
+                    <h1>Book IBLTS Professional Test</h1>
+                    <p>Book your IBLTS Professional test for healthcare and regulated professions requiring Bangla language proficiency.</p>
+                    
+                    <div class="info-box">
+                        <h3>Professional Test</h3>
+                        <p>This test is designed for healthcare professionals and other regulated professions who need to demonstrate their Bangla language skills for professional registration in Bangladesh.</p>
+                    </div>
+                    
+                    <div class="booking-steps">
+                        <div class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <h3>Select Date</h3>
+                            <p>Choose your test date</p>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>Choose Location</h3>
+                            <p>Select test center</p>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-edit"></i>
+                            </div>
+                            <h3>Enter Details</h3>
+                            <p>Provide your information</p>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3>Confirm & Pay</h3>
+                            <p>Complete booking</p>
+                        </div>
+                    </div>
+                    
+                    <h2>Select Test Format</h2>
+                    <div class="test-option-card">
+                        <div class="test-option-header">
+                            <div class="test-option-icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <div>
+                                <h3>Computer-Delivered Test</h3>
+                                <p>Faster results (3-5 days), more test dates</p>
+                            </div>
+                        </div>
+                        <div class="test-option-content">
+                            <ul>
+                                <li>Results in 3-5 days</li>
+                                <li>More test dates available</li>
+                                <li>Headphones provided for listening section</li>
+                                <li>Professional vocabulary focus</li>
+                            </ul>
+                            <div class="price-tag">৳ 18,500</div>
+                            <button class="cta-button">Select Computer Test</button>
+                        </div>
+                    </div>
+                    
+                    <h2>Professions Requiring IBLTS Professional</h2>
+                    <div class="professions-grid">
+                        <div class="profession-card">
+                            <div class="profession-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <h3>Doctors</h3>
+                        </div>
+                        
+                        <div class="profession-card">
+                            <div class="profession-icon">
+                                <i class="fas fa-user-nurse"></i>
+                            </div>
+                            <h3>Nurses</h3>
+                        </div>
+                        
+                        <div class="profession-card">
+                            <div class="profession-icon">
+                                <i class="fas fa-pills"></i>
+                            </div>
+                            <h3>Pharmacists</h3>
+                        </div>
+                        
+                        <div class="profession-card">
+                            <div class="profession-icon">
+                                <i class="fas fa-teeth"></i>
+                            </div>
+                            <h3>Dentists</h3>
+                        </div>
+                        
+                        <div class="profession-card">
+                            <div class="profession-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h3>Lawyers</h3>
+                        </div>
+                        
+                        <div class="profession-card">
+                            <div class="profession-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <h3>Teachers</h3>
+                        </div>
+                    </div>
+                    
+                    <h2>Test Dates & Locations</h2>
+                    <div class="test-locations">
+                        <div class="location-card">
+                            <div class="location-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3>Dhaka Test Center</h3>
+                                <p>23 Language Street, Dhaka</p>
+                                <p>Available dates: 16 Aug, 30 Aug, 13 Sep</p>
+                            </div>
+                        </div>
+                        
+                        <div class="location-card">
+                            <div class="location-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3>Chattogram Test Center</h3>
+                                <p>45 Education Road, Chattogram</p>
+                                <p>Available dates: 19 Aug, 2 Sep, 16 Sep</p>
+                            </div>
+                        </div>
+                        
+                        <div class="location-card">
+                            <div class="location-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3>Sylhet Test Center</h3>
+                                <p>15 Medical Road, Sylhet</p>
+                                <p>Available dates: 22 Aug, 5 Sep, 19 Sep</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2>Registration Form</h2>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="profession">Your Profession</label>
+                            <select id="profession">
+                                <option>Doctor</option>
+                                <option>Nurse</option>
+                                <option>Pharmacist</option>
+                                <option>Dentist</option>
+                                <option>Lawyer</option>
+                                <option>Teacher</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="organization">Professional Organization</label>
+                            <input type="text" id="organization">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="id-type">ID Document Type</label>
+                            <select id="id-type">
+                                <option>Passport</option>
+                                <option>National ID</option>
+                                <option>Professional License</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="id-number">ID Document Number</label>
+                            <input type="text" id="id-number" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="test-date">Preferred Test Date</label>
+                            <input type="date" id="test-date" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="location">Test Center Location</label>
+                            <select id="location">
+                                <option>Dhaka Test Center</option>
+                                <option>Chattogram Test Center</option>
+                                <option>Sylhet Test Center</option>
+                                <option>Rajshahi Test Center</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="cta-button">Complete Booking</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h3>Test Information</h3>
+                <ul>
+                    <li><a href="test-types.html">Test Types Overview</a></li>
+                    <li><a href="computer-vs-paper.html">Computer vs Paper</a></li>
+                    <li><a href="preparation.html">Professional Preparation</a></li>
+                    <li><a href="results.html">Understanding Scores</a></li>
+                </ul>
+                
+                <h3>Booking Options</h3>
+                <ul>
+                    <li><a href="book-academic.html">Academic Test</a></li>
+                    <li><a href="book-general.html">General Test</a></li>
+                    <li><a href="book-professional.html" class="active">Professional Test</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About IBLTS</h3>
+                    <p>The International Bangla Language Testing System is the world's most popular Bangla language proficiency test for higher education and global migration.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="test-types.html">Test Types</a></li>
+                        <li><a href="preparation.html">Preparation</a></li>
+                        <li><a href="results.html">Results</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Test Types</h3>
+                    <ul>
+                        <li><a href="test-types.html">IBLTS Academic</a></li>
+                        <li><a href="test-types.html">IBLTS General Training</a></li>
+                        <li><a href="test-types.html">IBLTS Professional</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +880 19 7820 8563</li>
+                        <li><i class="fas fa-envelope"></i> info@iblts.org</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 International Bangla Language Testing System (IBLTS). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

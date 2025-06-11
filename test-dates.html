@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Dates - IBLTS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .calendar-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0;
+            background: #f0f5ff;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .calendar-nav button {
+            background: #0056b3;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin-bottom: 40px;
+        }
+        
+        .calendar-header {
+            text-align: center;
+            font-weight: bold;
+            padding: 15px;
+            background: #0056b3;
+            color: white;
+        }
+        
+        .calendar-day {
+            min-height: 120px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background: white;
+            position: relative;
+        }
+        
+        .calendar-day.empty {
+            background: #f8f9fa;
+            border: none;
+        }
+        
+        .day-number {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-weight: bold;
+            color: #0056b3;
+        }
+        
+        .test-slot {
+            background: #e3f2fd;
+            padding: 5px;
+            margin-top: 25px;
+            font-size: 0.85em;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .test-slot:hover {
+            background: #bbdefb;
+        }
+        
+        .filters {
+            background: #f0f5ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .filter-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .deadline-info {
+            background: #fff8e1;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container main-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-language" style="font-size: 36px; color: #0056b3;"></i>
+                </div>
+                <div class="logo-text">I<span class="logo-accent">B</span>LTS</div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="test-types.html">Test Types</a></li>
+                    <li><a href="preparation.html">Preparation</a></li>
+                    <li><a href="results.html">Results</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <a href="test-types.html" class="cta-button">Book a Test</a>
+        </div></header>
+
+    <!-- Breadcrumb -->
+    <div class="container breadcrumb">
+        <a href="index.html">Home</a> <span>&gt;</span> 
+        <span>Test Dates</span>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="page-content">
+            <h1>Test Dates & Registration</h1>
+            
+            <div class="filters">
+                <h3><i class="fas fa-filter"></i> Filter Test Dates</h3>
+                <div class="filter-group">
+                    <select class="form-control">
+                        <option>Select Test Type</option>
+                        <option>Academic</option>
+                        <option>General Training</option>
+                        <option>Professional</option>
+                    </select>
+                    
+                    <select class="form-control">
+                        <option>Select Division</option>
+                        <option>Dhaka</option>
+                        <option>Chattogram</option>
+                        <option>Khulna</option>
+                        <option>Rajshahi</option>
+                    </select>
+                    
+                    <select class="form-control">
+                        <option>Select Month</option>
+                        <option>July 2025</option>
+                        <option>August 2025</option>
+                        <option>September 2025</option>
+                    </select>
+                    
+                    <button class="btn">Apply Filters</button>
+                </div>
+            </div>
+            
+            <div class="calendar-controls">
+                <div class="calendar-nav">
+                    <button><i class="fas fa-chevron-left"></i> Previous</button>
+                </div>
+                <h2>June 2025</h2>
+                <div class="calendar-nav">
+                    <button>Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="calendar-grid">
+                <div class="calendar-header">Sun</div>
+                <div class="calendar-header">Mon</div>
+                <div class="calendar-header">Tue</div>
+                <div class="calendar-header">Wed</div>
+                <div class="calendar-header">Thu</div>
+                <div class="calendar-header">Fri</div>
+                <div class="calendar-header">Sat</div>
+                
+                <!-- Empty days for June 2025 start on Sunday -->
+                <div class="calendar-day empty"></div>
+                <div class="calendar-day">
+                    <div class="day-number">1</div>
+                    <div class="test-slot">Academic (AM)</div>
+                    <div class="test-slot">General (PM)</div>
+                </div>
+                <div class="calendar-day">
+                    <div class="day-number">2</div>
+                </div>
+                <div class="calendar-day">
+                    <div class="day-number">3</div>
+                    <div class="test-slot">Professional (Full Day)</div>
+                </div>
+                <!-- More days would be added here -->
+                <div class="calendar-day">
+                    <div class="day-number">28</div>
+                    <div class="test-slot">Academic (AM)</div>
+                    <div class="test-slot">General (PM)</div>
+                </div>
+                <div class="calendar-day">
+                    <div class="day-number">29</div>
+                </div>
+                <div class="calendar-day">
+                    <div class="day-number">30</div>
+                    <div class="test-slot">Professional (Full Day)</div>
+                </div>
+            </div>
+            
+            <div class="deadline-info">
+                <h2><i class="fas fa-exclamation-circle"></i> Registration Deadlines</h2>
+                <p>Book at least 4 weeks before your test date to secure your preferred location.</p>
+                <p>Late registration (up to 1 week before test date) incurs ৳ 1,000 additional fee.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer><!-- ... same as homepage ... --></footer>
+</body>
+</html>

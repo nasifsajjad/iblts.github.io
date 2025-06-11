@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Centers - IBLTS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional CSS for test centers page */
+        .test-center-filters {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .test-center-map {
+            height: 400px;
+            background: #f0f5ff;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .test-center-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .test-center-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        
+        .test-center-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .center-name {
+            color: #0056b3;
+            margin-bottom: 10px;
+        }
+        
+        .center-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+
+        
+        <div class="container main-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-language" style="font-size: 36px; color: #0056b3;"></i>
+                </div>
+                <div class="logo-text">I<span class="logo-accent">B</span>LTS</div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="test-types.html">Test Types</a></li>
+                    <li><a href="preparation.html">Preparation</a></li>
+                    <li><a href="results.html">Results</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <a href="test-dates.html" class="btn">Book a Test</a>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> <span>&gt;</span> 
+            <span>Test Centers</span>
+        </div>
+        
+        <div class="page-content">
+            <h1>IBLTS Test Centers</h1>
+            <p>Find an authorized IBLTS test center near you. We have centers located throughout Bangladesh and in select international locations.</p>
+            
+            <div class="test-center-filters">
+                <div class="filter-group">
+                    <label for="location">Location</label>
+                    <select id="location">
+                        <option>All Locations</option>
+                        <option>Dhaka</option>
+                        <option>Chittagong</option>
+                        <option>Rajshahi</option>
+                        <option>Khulna</option>
+                        <option>Sylhet</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="test-type">Test Type</label>
+                    <select id="test-type">
+                        <option>All Test Types</option>
+                        <option>Academic</option>
+                        <option>General</option>
+                        <option>Professional</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="test-mode">Test Mode</label>
+                    <select id="test-mode">
+                        <option>All Modes</option>
+                        <option>Computer-based</option>
+                        <option>Paper-based</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <button class="btn" style="margin-top: 24px;">Apply Filters</button>
+                </div>
+            </div>
+            
+            <div class="test-center-map">
+                <i class="fas fa-map-marked-alt" style="font-size: 48px; color: #0056b3;"></i>
+                <p style="margin-left: 20px;">Interactive map of test center locations</p>
+            </div>
+            
+            <h2>Available Test Centers</h2>
+            <div class="test-center-list">
+                <div class="test-center-card">
+                    <h3 class="center-name">Dhaka Main Center</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Bangla Street, Dhaka 1212</p>
+                    <p><i class="fas fa-phone"></i> +880 2 9123456</p>
+                    <p><i class="fas fa-envelope"></i> dhaka@iblts.org</p>
+                    <div class="center-meta">
+                        <span><i class="fas fa-desktop"></i> Computer-based</span>
+                        <span><i class="fas fa-chair"></i> 50 seats</span>
+                    </div>
+                </div>
+                
+                <div class="test-center-card">
+                    <h3 class="center-name">Chittagong Center</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 456 Agrabad Commercial Area, Chittagong</p>
+                    <p><i class="fas fa-phone"></i> +880 31 654321</p>
+                    <p><i class="fas fa-envelope"></i> chittagong@iblts.org</p>
+                    <div class="center-meta">
+                        <span><i class="fas fa-desktop"></i> Computer-based</span>
+                        <span><i class="fas fa-chair"></i> 30 seats</span>
+                    </div>
+                </div>
+                
+                <div class="test-center-card">
+                    <h3 class="center-name">Rajshahi Center</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> University Campus, Rajshahi</p>
+                    <p><i class="fas fa-phone"></i> +880 72 112233</p>
+                    <p><i class="fas fa-envelope"></i> rajshahi@iblts.org</p>
+                    <div class="center-meta">
+                        <span><i class="fas fa-file-alt"></i> Paper-based</span>
+                        <span><i class="fas fa-chair"></i> 40 seats</span>
+                    </div>
+                </div>
+                
+                <div class="test-center-card">
+                    <h3 class="center-name">Khulna Center</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Khan Jahan Ali Road, Khulna</p>
+                    <p><i class="fas fa-phone"></i> +880 41 778899</p>
+                    <p><i class="fas fa-envelope"></i> khulna@iblts.org</p>
+                    <div class="center-meta">
+                        <span><i class="fas fa-desktop"></i> Computer-based</span>
+                        <span><i class="fas fa-chair"></i> 25 seats</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About IBLTS</h3>
+                    <p>International Bangla Language Testing System is the world's leading Bangla language proficiency test for higher education and global migration.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="test-types.html">Test Types</a></li>
+                        <li><a href="preparation.html">Preparation</a></li>
+                        <li><a href="results.html">Results</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Test Types</h3>
+                    <ul>
+                        <li><a href="book-academic.html">Academic Test</a></li>
+                        <li><a href="book-general.html">General Test</a></li>
+                        <li><a href="book-professional.html">Professional Test</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Bangla Street, Dhaka</li>
+                        <li><i class="fas fa-phone"></i> +880 19 7820 8563</li>
+                        <li><i class="fas fa-envelope"></i> info@iblts.org</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 International Bangla Language Testing System (IBLTS). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer vs Paper - IBLTS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: #0056b3;
+            color: white;
+            font-weight: 500;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .test-format-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .format-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 2px solid #eee;
+            transition: all 0.3s;
+        }
+        
+        .format-card:hover {
+            transform: translateY(-10px);
+            border-color: #0056b3;
+        }
+        
+        .format-header {
+            background: #f0f5ff;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .format-icon {
+            font-size: 48px;
+            color: #0056b3;
+            margin-bottom: 15px;
+        }
+        
+        .format-content {
+            padding: 25px;
+        }
+        
+        .format-content ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        .format-content li {
+            margin-bottom: 10px;
+        }
+        
+        .info-card {
+            background: #f0f5ff;
+            border-left: 4px solid #e63946;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .test-experience {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+            align-items: center;
+        }
+        
+        .test-experience-img {
+            flex: 1;
+            min-height: 300px;
+            background: #0056b3;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .test-experience-content {
+            flex: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .test-experience {
+                flex-direction: column;
+            }
+        }
+
+                .cta-button {
+            background-color: #e63946;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #c1121f;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        
+        <div class="container main-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-language" style="font-size: 36px; color: #0056b3;"></i>
+                </div>
+                <div class="logo-text">I<span class="logo-accent">B</span>LTS</div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="test-types.html">Test Types</a></li>
+                    <li><a href="preparation.html">Preparation</a></li>
+                    <li><a href="results.html">Results</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <a href="test-types.html" class="cta-button">Book a Test</a>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> <span>&gt;</span> 
+            <a href="test-types.html">Test Types</a> <span>&gt;</span> 
+            <a href="computer-vs-paper.html">Computer vs Paper</a>
+        </div>
+        
+        <!-- Page Content Container -->
+        <div class="content-grid">
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <div class="page-content">
+                    <h1>Computer-Delivered vs Paper-Based IBLTS</h1>
+                    <p>Choose between computer-delivered and paper-based IBLTS tests based on your preferences and needs.</p>
+                    
+                    <div class="info-card">
+                        <h3>Which format is right for you?</h3>
+                        <p>Both formats have the same content, scoring, and level of difficulty. The main differences are in the delivery method and result timing.</p>
+                    </div>
+                    
+                    <h2>Key Differences</h2>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Computer-Delivered</th>
+                                <th>Paper-Based</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Test Delivery</td>
+                                <td>On computer at test center</td>
+                                <td>Paper booklet at test center</td>
+                            </tr>
+                            <tr>
+                                <td>Result Timing</td>
+                                <td>3-5 days</td>
+                                <td>13 days</td>
+                            </tr>
+                            <tr>
+                                <td>Test Dates</td>
+                                <td>More frequent dates</td>
+                                <td>Limited dates per month</td>
+                            </tr>
+                            <tr>
+                                <td>Writing Section</td>
+                                <td>Typed on computer</td>
+                                <td>Handwritten</td>
+                            </tr>
+                            <tr>
+                                <td>Reading Section</td>
+                                <td>Text on screen, highlight function</td>
+                                <td>Paper booklet, can underline</td>
+                            </tr>
+                            <tr>
+                                <td>Listening Section</td>
+                                <td>Headphones provided</td>
+                                <td>Speakers in test room</td>
+                            </tr>
+                            <tr>
+                                <td>Word Count</td>
+                                <td>Automatically displayed</td>
+                                <td>Manual counting</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h2>Test Format Options</h2>
+                    <div class="test-format-cards">
+                        <div class="format-card">
+                            <div class="format-header">
+                                <div class="format-icon">
+                                    <i class="fas fa-laptop"></i>
+                                </div>
+                                <h3>Computer-Delivered Test</h3>
+                            </div>
+                            <div class="format-content">
+                                <p><strong>Ideal for:</strong> Fast results, comfortable with typing, prefer digital format</p>
+                                <ul>
+                                    <li>Results in 3-5 days</li>
+                                    <li>More test dates available</li>
+                                    <li>Headphones for listening section</li>
+                                    <li>Word count and timer on screen</li>
+                                    <li>Highlight text function</li>
+                                    <li>Typed writing responses</li>
+                                </ul>
+                                <div style="text-align: center; margin-top: 20px;">
+                                    <a href="/test-types.html" class="cta-button">Book Computer Test</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="format-card">
+                            <div class="format-header">
+                                <div class="format-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <h3>Paper-Based Test</h3>
+                            </div>
+                            <div class="format-content">
+                                <p><strong>Ideal for:</strong> Prefer handwriting, comfortable with paper format, no rush for results</p>
+                                <ul>
+                                    <li>Results in 13 days</li>
+                                    <li>Traditional test format</li>
+                                    <li>Handwritten writing responses</li>
+                                    <li>Ability to underline on reading section</li>
+                                    <li>Available at all test centers</li>
+                                    <li>No computer skills required</li>
+                                </ul>
+                                <div style="text-align: center; margin-top: 20px;">
+                                    <a href="/test-types.html" class="cta-button">Book Paper Test</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2>Test Experience Comparison</h2>
+                    <div class="test-experience">
+                        <div class="test-experience-content">
+                            <h3>Computer-Delivered Experience</h3>
+                            <ul>
+                                <li>Check-in process similar to paper-based test</li>
+                                <li>Assigned to a private workstation with computer</li>
+                                <li>Noise-canceling headphones provided</li>
+                                <li>Screen displays questions and answer fields</li>
+                                <li>Timer visible on screen throughout test</li>
+                                <li>Writing section requires typing skills</li>
+                            </ul>
+                            <p style="color: white;;">b</p>
+                            <h3>Paper-Based Experience</h3>
+                            <ul>
+                                <li>Traditional test format in a quiet room</li>
+                                <li>Receive question booklet and answer sheet</li>
+                                <li>Listening section played through speakers</li>
+                                <li>Writing section requires handwriting</li>
+                                <li>Ability to make notes on question paper</li>
+                                <li>Transfer answers to answer sheet</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Which should you choose?</h3>
+                        <p>If you type faster than you write and want faster results, choose computer-delivered. If you prefer handwriting and don't mind waiting longer for results, choose paper-based. Both formats have the same content and difficulty level.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="academic-vs-general.html">Academic vs General</a></li>
+                    <li><a href="computer-vs-paper.html" class="active">Computer vs Paper</a></li>
+                    <li><a href="book-academic.html">Book Academic Test</a></li>
+                    <li><a href="book-general.html">Book General Test</a></li>
+                    <li><a href="book-professional.html">Book Professional Test</a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About IBLTS</h3>
+                    <p>The International Bangla Language Testing System is the world's most popular Bangla language proficiency test for higher education and global migration.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="test-types.html">Test Types</a></li>
+                        <li><a href="preparation.html">Preparation</a></li>
+                        <li><a href="results.html">Results</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Test Types</h3>
+                    <ul>
+                        <li><a href="test-types.html">IBLTS Academic</a></li>
+                        <li><a href="test-types.html">IBLTS General Training</a></li>
+                        <li><a href="test-types.html">IBLTS Professional</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +880 19 7820 8563</li>
+                        <li><i class="fas fa-envelope"></i> info@iblts.org</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 International Bangla Language Testing System (IBLTS). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Fees - IBLTS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .fee-structure {
+            margin: 40px 0;
+        }
+        
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .fee-table th, 
+        .fee-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .fee-table th {
+            background-color: #0056b3;
+            color: white;
+            font-weight: 500;
+        }
+        
+        .fee-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .payment-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border-top: 4px solid #e63946;
+        }
+        
+        .payment-icon {
+            font-size: 36px;
+            color: #0056b3;
+            margin-bottom: 15px;
+        }
+        
+        .refund-policy {
+            background: #f0f5ff;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .refund-stages {
+            margin-top: 20px;
+        }
+        
+        .refund-stage {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #ccc;
+        }
+        
+        .stage-icon {
+            background: #0056b3;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+
+        
+        <div class="container main-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-language" style="font-size: 36px; color: #0056b3;"></i>
+                </div>
+                <div class="logo-text">I<span class="logo-accent">B</span>LTS</div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="test-types.html">Test Types</a></li>
+                    <li><a href="preparation.html">Preparation</a></li>
+                    <li><a href="results.html">Results</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <a href="test-types.html" class="cta-button">Book a Test</a>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="container breadcrumb">
+        <a href="index.html">Home</a> <span>&gt;</span> 
+        <span>Test Fees</span>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="page-content">
+            <h1>Test Fees & Payment</h1>
+            
+            <div class="fee-structure">
+                <h2><i class="fas fa-money-bill-wave"></i> Fee Structure</h2>
+                <table class="fee-table">
+                    <thead>
+                        <tr>
+                            <th>Test Type</th>
+                            <th>Standard Fee</th>
+                            <th>Premium Center Fee</th>
+                            <th>Special Requirements Fee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>IBLTS Academic</td>
+                            <td>৳ 15,000</td>
+                            <td>৳ 18,000</td>
+                            <td>৳ 20,000</td>
+                        </tr>
+                        <tr>
+                            <td>IBLTS General Training</td>
+                            <td>৳ 14,500</td>
+                            <td>৳ 17,500</td>
+                            <td>৳ 19,500</td>
+                        </tr>
+                        <tr>
+                            <td>IBLTS Professional</td>
+                            <td>৳ 16,500</td>
+                            <td>৳ 19,500</td>
+                            <td>৳ 21,500</td>
+                        </tr>
+                        <tr>
+                            <td>Life Skills</td>
+                            <td>৳ 12,000</td>
+                            <td>৳ 15,000</td>
+                            <td>৳ 17,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="payment-options">
+                <h2><i class="fas fa-credit-card"></i> Payment Methods</h2>
+                <div class="payment-methods">
+                    <div class="payment-card">
+                        <div class="payment-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Banking</h3>
+                        <p>bKash, Nagad, Rocket</p>
+                    </div>
+                    
+                    <div class="payment-card">
+                        <div class="payment-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h3>Credit/Debit</h3>
+                        <p>Visa, MasterCard</p>
+                    </div>
+                    
+                    <div class="payment-card">
+                        <div class="payment-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>Bank Transfer</h3>
+                        <p>All Bangladeshi banks</p>
+                    </div>
+                    
+                    <div class="payment-card">
+                        <div class="payment-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3>Cash Payment</h3>
+                        <p>Authorized centers only</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="refund-policy">
+                <h2><i class="fas fa-exchange-alt"></i> Refund Policy</h2>
+                <p>Our refund policy is designed to be fair while considering administrative costs:</p>
+                
+                <div class="refund-stages">
+                    <div class="refund-stage">
+                        <div class="stage-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div>
+                            <h3>More than 4 weeks before test</h3>
+                            <p>Full refund minus ৳ 1,500 administration fee</p>
+                        </div>
+                    </div>
+                    
+                    <div class="refund-stage">
+                        <div class="stage-icon">
+                            <i class="fas fa-calendar-week"></i>
+                        </div>
+                        <div>
+                            <h3>2-4 weeks before test</h3>
+                            <p>50% of test fee refunded</p>
+                        </div>
+                    </div>
+                    
+                    <div class="refund-stage">
+                        <div class="stage-icon">
+                            <i class="fas fa-calendar-times"></i>
+                        </div>
+                        <div>
+                            <h3>Less than 2 weeks before test</h3>
+                            <p>No refund available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer><!-- ... same as homepage ... --></footer>
+</body>
+</html>
