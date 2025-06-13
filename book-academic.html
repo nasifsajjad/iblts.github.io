@@ -154,13 +154,82 @@
         .cta-button:hover {
             background-color: #c1121f;
         }
+        
+        @media (max-width: 768px) {
+    .content-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar {
+        order: 2;
+        margin-top: 40px;
+        padding-top: 30px;
+        border-top: 2px solid #eee;
+    }
+
+    .booking-steps {
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+    }
+
+    .booking-steps::before {
+        width: 3px;
+        height: 100%;
+        top: 0;
+        left: 25px;
+        right: auto;
+    }
+
+    .step {
+        width: 100%;
+        text-align: left;
+        padding-left: 70px;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .step-icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .test-option-card {
+        margin: 30px 0;
+    }
+
+    .test-option-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .test-option-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .location-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .location-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
     </style>
 </head>
 <body>
-    <!-- Header Section -->
+<!-- Header Section -->
     <header>
-
-        
         <div class="container main-header">
             <div class="logo">
                 <div class="logo-icon">
@@ -169,9 +238,10 @@
                 <div class="logo-text">I<span class="logo-accent">B</span>LTS</div>
             </div>
             
+            <!-- Desktop Navigation -->
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="test-types.html">Test Types</a></li>
                     <li><a href="preparation.html">Preparation</a></li>
@@ -181,8 +251,32 @@
             </nav>
             
             <a href="test-types.html" class="cta-button">Book a Test</a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
+    
+    <!-- Mobile Menu -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="close-menu" id="close-menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="test-types.html">Test Types</a></li>
+                <li><a href="preparation.html">Preparation</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="test-types.html" class="cta-button">Book a Test</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Page Content -->
     <div class="container">
@@ -398,7 +492,7 @@
                 
                 <h3>Need Help?</h3>
                 <ul>
-                    <li><i class="fas fa-phone"></i> +880 19 7820 8563</li>
+                    
                     <li><i class="fas fa-envelope"></i> support@iblts.org</li>
                 </ul>
             </div>
@@ -437,7 +531,7 @@
                 <div class="footer-column">
                     <h3>Contact Us</h3>
                     <ul>
-                        <li><i class="fas fa-phone"></i> +880 19 7820 8563</li>
+                        
                         <li><i class="fas fa-envelope"></i> info@iblts.org</li>
                     </ul>
                     <div class="social-icons">
@@ -454,5 +548,30 @@
             </div>
         </div>
     </footer>
+ <script>
+        // Mobile menu toggle functionality
+        const hamburger = document.getElementById('hamburger');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+        
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            menuOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        menuOverlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    </script>
 </body>
 </html>

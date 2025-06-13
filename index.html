@@ -1,4 +1,3 @@
-<!-- index.html (Homepage) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* CSS for index.html */
+        /* Original CSS */
         * {
             margin: 0;
             padding: 0;
@@ -30,7 +29,6 @@
             padding: 0 20px;
         }
 
-        /* Header Styles */
         header {
             background-color: #fff;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -63,6 +61,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 0;
+            position: relative;
         }
 
         .logo {
@@ -117,7 +116,6 @@
             background-color: #c1121f;
         }
 
-        /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 86, 179, 0.85), rgba(0, 86, 179, 0.9)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3') center/cover;
             color: white;
@@ -178,7 +176,6 @@
             background-color: rgba(255, 255, 255, 0.1);
         }
 
-        /* Test Types Section */
         .section {
             padding: 80px 0;
         }
@@ -244,7 +241,6 @@
             margin-bottom: 20px;
         }
 
-        /* Why Choose IBLTS */
         .why-iblts {
             background-color: #f0f5ff;
         }
@@ -275,7 +271,6 @@
             color: #0056b3;
         }
 
-        /* Testimonials */
         .testimonials {
             background-color: #0056b3;
             color: white;
@@ -327,7 +322,6 @@
             object-fit: cover;
         }
 
-        /* Footer */
         footer {
             background-color: #002147;
             color: white;
@@ -383,10 +377,17 @@
             font-size: 14px;
         }
 
+        /* Mobile Menu Components - Hidden on Desktop */
+        .hamburger, 
+        .mobile-menu, 
+        .menu-overlay {
+            display: none;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .main-header {
-                flex-direction: column;
+                flex-direction: row;
                 padding: 15px 0;
             }
 
@@ -416,14 +417,113 @@
             .section {
                 padding: 60px 0;
             }
+            
+            /* Show hamburger on mobile */
+            .hamburger {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                background: none;
+                border: none;
+                font-size: 24px;
+                color: #0056b3;
+                cursor: pointer;
+                z-index: 1001;
+            }
+            
+            /* Hide desktop navigation on mobile */
+            .main-header nav,
+            .main-header .cta-button {
+                display: none;
+            }
+            
+            /* Mobile menu styles */
+            .mobile-menu {
+                display: block;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 320px;
+                height: 100%;
+                background: white;
+                z-index: 1000;
+                transition: right 0.3s ease-in-out;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                overflow-y: auto;
+            }
+            
+            .mobile-menu.active {
+                right: 0;
+            }
+            
+            .mobile-menu nav ul {
+                display: flex;
+                flex-direction: column;
+                padding: 80px 20px 20px;
+            }
+            
+            .mobile-menu nav ul li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu nav ul li a {
+                display: block;
+                padding: 12px 0;
+                border-bottom: 1px solid #eee;
+                font-size: 18px;
+            }
+            
+            .mobile-menu .cta-button {
+                display: block;
+                margin: 20px;
+                text-align: center;
+                width: calc(100% - 40px);
+            }
+            
+            .close-menu {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 24px;
+                background: none;
+                border: none;
+                color: #333;
+                cursor: pointer;
+            }
+            
+            .menu-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+            }
+            
+            .menu-overlay.active {
+                display: block;
+            }
+            
+            /* Adjust header for mobile */
+            .main-header {
+                position: relative;
+                padding-bottom: 30px;
+            }
+            
+            .logo {
+                width: 100%;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Header Section -->
     <header>
-
-        
         <div class="container main-header">
             <div class="logo">
                 <div class="logo-icon">
@@ -432,6 +532,7 @@
                 <div class="logo-text">I<span class="logo-accent">B</span>LTS</div>
             </div>
             
+            <!-- Desktop Navigation -->
             <nav>
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
@@ -444,8 +545,32 @@
             </nav>
             
             <a href="test-types.html" class="cta-button">Book a Test</a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
+    
+    <!-- Mobile Menu -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="close-menu" id="close-menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="test-types.html">Test Types</a></li>
+                <li><a href="preparation.html">Preparation</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="test-types.html" class="cta-button">Book a Test</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -617,8 +742,7 @@
                 <div class="footer-column">
                     <h3>Contact Us</h3>
                     <ul>
-
-                        <li><i class="fas fa-phone"></i> +880 19 7820 8563</li>
+                        
                         <li><i class="fas fa-envelope"></i> info@iblts.org</li>
                     </ul>
                     <div class="social-icons" style="margin-top: 20px;">
@@ -635,5 +759,31 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        // Mobile menu toggle functionality
+        const hamburger = document.getElementById('hamburger');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+        
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            menuOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        menuOverlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    </script>
 </body>
 </html>

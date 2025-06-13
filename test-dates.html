@@ -98,6 +98,7 @@
 </head>
 <body>
     <!-- Header -->
+<!-- Header Section -->
     <header>
         <div class="container main-header">
             <div class="logo">
@@ -107,6 +108,7 @@
                 <div class="logo-text">I<span class="logo-accent">B</span>LTS</div>
             </div>
             
+            <!-- Desktop Navigation -->
             <nav>
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
@@ -119,7 +121,32 @@
             </nav>
             
             <a href="test-types.html" class="cta-button">Book a Test</a>
-        </div></header>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="close-menu" id="close-menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="test-types.html">Test Types</a></li>
+                <li><a href="preparation.html">Preparation</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="test-types.html" class="cta-button">Book a Test</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Breadcrumb -->
     <div class="container breadcrumb">
@@ -217,7 +244,80 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer><!-- ... same as homepage ... --></footer>
+        <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About IBLTS</h3>
+                    <p>International Bangla Language Testing System is the world's leading Bangla language proficiency test for higher education and global migration.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="test-types.html">Test Types</a></li>
+                        <li><a href="preparation.html">Preparation</a></li>
+                        <li><a href="results.html">Results</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Test Types</h3>
+                    <ul>
+                        <li><a href="book-academic.html">Academic Test</a></li>
+                        <li><a href="book-general.html">General Test</a></li>
+                        <li><a href="book-professional.html">Professional Test</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Bangla Street, Dhaka</li>
+                        
+                        <li><i class="fas fa-envelope"></i> info@iblts.org</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 International Bangla Language Testing System (IBLTS). All rights reserved.</p>
+            </div>
+        </div>
+</footer>
+ <script>
+        // Mobile menu toggle functionality
+        const hamburger = document.getElementById('hamburger');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+        
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            menuOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        menuOverlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    </script>
 </body>
 </html>

@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
+<!-- Header Section -->
     <header>
         <div class="container main-header">
             <div class="logo">
@@ -23,19 +23,46 @@
                 </div>
                 <div class="logo-text">I<span class="logo-accent">B</span>LTS</div>
             </div>
+            
+            <!-- Desktop Navigation -->
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="test-types.html">Test Types</a></li>
                     <li><a href="preparation.html">Preparation</a></li>
-                    <li><a href="results.html" class="active">Results</a></li>
+                    <li><a href="results.html">Results</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            
             <a href="test-types.html" class="cta-button">Book a Test</a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
+    
+    <!-- Mobile Menu -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="close-menu" id="close-menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="test-types.html">Test Types</a></li>
+                <li><a href="preparation.html">Preparation</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="test-types.html" class="cta-button">Book a Test</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Page Content -->
     <div class="container">
@@ -99,7 +126,7 @@
                 <div class="footer-column">
                     <h3>Contact Us</h3>
                     <ul>
-                        <li><i class="fas fa-phone"></i> +880 19 7820 8563</li>
+                        
                         <li><i class="fas fa-envelope"></i> info@iblts.org</li>
                     </ul>
                     <div class="social-icons" style="margin-top: 20px;">
@@ -115,5 +142,30 @@
             </div>
         </div>
     </footer>
+ <script>
+        // Mobile menu toggle functionality
+        const hamburger = document.getElementById('hamburger');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+        
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            menuOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        menuOverlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    </script>
 </body>
 </html>

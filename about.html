@@ -298,8 +298,6 @@
 <body>
     <!-- Header Section -->
     <header>
-
-        
         <div class="container main-header">
             <div class="logo">
                 <div class="logo-icon">
@@ -308,10 +306,11 @@
                 <div class="logo-text">I<span class="logo-accent">B</span>LTS</div>
             </div>
             
+            <!-- Desktop Navigation -->
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="test-types.html">Test Types</a></li>
                     <li><a href="preparation.html">Preparation</a></li>
                     <li><a href="results.html">Results</a></li>
@@ -320,8 +319,32 @@
             </nav>
             
             <a href="test-types.html" class="cta-button">Book a Test</a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
+    
+    <!-- Mobile Menu -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="close-menu" id="close-menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="test-types.html">Test Types</a></li>
+                <li><a href="preparation.html">Preparation</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="test-types.html" class="cta-button">Book a Test</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Page Content -->
     <div class="container">
@@ -351,7 +374,7 @@
                     
                     <div class="team-grid">
                         <div class="team-member">
-                            <img src="https://scontent.fbah5-1.fna.fbcdn.net/v/t39.30808-6/470197802_122179228004121053_6322477295460843301_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=_-JoF4Hswe4Q7kNvwG2KVoN&_nc_oc=AdmsR-6uG0koRbFtwM3IEL5ZVj0QF-cB03GYkh3Y4KSXQ-DEPhnL-iU-NpA4P_uFNDk&_nc_zt=23&_nc_ht=scontent.fbah5-1.fna&_nc_gid=AShnGaStFmNNdLIM6PkFkA&oh=00_AfNX8I3XYBIn2RHLdEr7vnlnGjPT753-TRylISOBvCLEBg&oe=684E449A" alt="Nasif Sajjad">
+                            <img src="https://scontent.fbah5-1.fna.fbcdn.net/v/t39.30808-6/506539711_122213257418121053_1118977479697447714_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=_W4eDN_DZekQ7kNvwE5i0tq&_nc_oc=AdnN8ZnCzBknC6MAsaFsKOD0h_uc2k606NvStGFHvwa4YZYcbpUL8hE9bg1du_YKctE&_nc_zt=23&_nc_ht=scontent.fbah5-1.fna&_nc_gid=mvdRQrWv6jJ4-WjLCADqwA&oh=00_AfMiZBnQXb2q3aPv_gyHjOnECoUJy0jMU8H3Ui_3yXOjhg&oe=6851D268" alt="Nasif Sajjad">
                             <h3>Nasif Sajjad</h3>
                             <p>Founder & Chief Assessment Officer</p>
                         </div>
@@ -419,7 +442,7 @@
                     <h3>Contact Us</h3>
                     <ul>
 
-                        <li><i class="fas fa-phone"></i> +880 19 7820 8563</li>
+                        
                         <li><i class="fas fa-envelope"></i> info@iblts.org</li>
                     </ul>
                     <div class="social-icons" style="margin-top: 20px;">
@@ -436,5 +459,30 @@
             </div>
         </div>
     </footer>
+ <script>
+        // Mobile menu toggle functionality
+        const hamburger = document.getElementById('hamburger');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+        
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            menuOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        menuOverlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    </script>
 </body>
 </html>
